@@ -45,7 +45,7 @@ public class BookstoreFullTest {
         // Test adding a book that already exists in inventory
         System.out.println("\n--- Testing Add Duplicate Book ---");
         try {
-            PaperBook duplicateBook = new PaperBook("978-1234567890", "The Great Gatsby", "alice gracful", 2000, 15.99, 5);
+            PaperBook duplicateBook = new PaperBook("978-1234567890", "The Great Gatsby", "alice gracful", 2000, 15.99, 10);
             store.addBook(duplicateBook);
         } catch (Exception e) {
             System.out.println("Expected error: " + e.getMessage());
