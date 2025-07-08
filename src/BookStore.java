@@ -36,12 +36,12 @@ public class BookStore {
                     MailService.SendMail((EBook)book,email);
                     return cost;
                 }
-                if(book instanceof PaperBook){
+                else if(book instanceof PaperBook){
                     double cost = book.Buy(quantity);
                     ShippingService.Ship((PaperBook)book,address);
                     return cost;
                 }
-                else if (book instanceof Demo) {
+                else {
                     throw new IllegalArgumentException("Demo books are not for sale");
                 }
             }
